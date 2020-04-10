@@ -9,7 +9,7 @@ import '../provider/category.dart';
 class CategoryItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final category = Provider.of<Category>(context);
+    final category = Provider.of<CustomCategory>(context);
     return ClipOval(
       child: Image.network(category.imageUrl,height: 80,width: 80,fit: BoxFit.contain,),
 
@@ -19,7 +19,7 @@ class CategoryItem extends StatelessWidget {
 class CateText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final category = Provider.of<Category>(context);
+    final category = Provider.of<CustomCategory>(context);
     return Column(children: <Widget>[
       CategoryItem(),
       Text(category.title)
